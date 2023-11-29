@@ -1,0 +1,17 @@
+name = "KIRO2023"
+uuid = "be2964f0-6e9b-465d-87b4-84f3cce1a0f3"
+authors = ["Léo Baty and contributors"]
+version = "0.1.0"
+
+[deps]
+JSON = "682c06a0-de6a-54ab-a142-c8b1cf79cde6"
+
+[compat]
+JSON = "0.21"
+julia = "1.9"
+
+[extras]
+Test = "8dfed614-e22c-5e08-85e1-65c5234f0b40"
+
+[targets]
+test = ["Test"]

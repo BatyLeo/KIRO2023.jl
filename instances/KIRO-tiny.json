@@ -1,0 +1,101 @@
+{
+    "general_parameters": {
+        "curtailing_cost": 0.4,
+        "curtailing_penalty": 0.8,
+        "fixed_cost_cable": 1000,
+        "main_land_station": {
+            "x": 0,
+            "y": 0
+        },
+        "maximum_curtailing": 50000,
+        "maximum_power": 1000,
+        "variable_cost_cable": 10
+    },
+    "land_substation_cable_types": [
+        {
+            "fixed_cost": 2000,
+            "id": 1,
+            "probability_of_failure": 0.02,
+            "rating": 500,
+            "variable_cost": 20
+        },
+        {
+            "fixed_cost": 3000,
+            "id": 2,
+            "probability_of_failure": 0.01,
+            "rating": 1000,
+            "variable_cost": 30
+        }
+    ],
+    "substation_locations": [
+        {
+            "id": 1,
+            "x": -10,
+            "y": -10
+        },
+        {
+            "id": 2,
+            "x": -20,
+            "y": -20
+        }
+    ],
+    "substation_substation_cable_types": [
+        {
+            "fixed_cost": 1000,
+            "id": 1,
+            "probability_of_failure": 0.02,
+            "rating": 500,
+            "variable_cost": 10
+        },
+        {
+            "fixed_cost": 1500,
+            "id": 2,
+            "probability_of_failure": 0.01,
+            "rating": 1000,
+            "variable_cost": 15
+        }
+    ],
+    "substation_types": [
+        {
+            "cost": 100000,
+            "id": 1,
+            "probability_of_failure": 0.01,
+            "rating": 500
+        },
+        {
+            "cost": 200000,
+            "id": 2,
+            "probability_of_failure": 0.005,
+            "rating": 1000
+        }
+    ],
+    "wind_scenarios": [
+        {
+            "id": 1,
+            "power_generation": 100,
+            "probability": 0.1
+        },
+        {
+            "id": 2,
+            "power_generation": 150,
+            "probability": 0.9
+        }
+    ],
+    "wind_turbines": [
+        {
+            "id": 1,
+            "x": -5,
+            "y": -5
+        },
+        {
+            "id": 2,
+            "x": -15,
+            "y": -15
+        },
+        {
+            "id": 3,
+            "x": -25,
+            "y": -25
+        }
+    ]
+}
