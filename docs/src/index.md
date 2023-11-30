@@ -16,14 +16,13 @@ This package exports the three following parsing functions:
 ## Data structures
 
 - [`Instance`](@ref)
-    - Methods `nb_tasks`, `nb_operators`, `nb_jobs`, `nb_machines` can be used to query instance parameters.
 - [`Solution`](@ref)
 
 Note: you may want to implement your own custom data structures that contain additional information that may be used by your algorithms.
 
 ## Evaluation utilities
 - [`is_feasible`](@ref): function that tests if a solution is feasible for a given instance
-- [`cost`](@ref): function that computes the cost of a solution for given instance
+- [`cost`](@ref), [`operational_cost`](@ref), [`construction_cost`](@ref): functions that computes the cost of a solution for given instance
 
 ---
 
