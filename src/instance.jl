@@ -27,6 +27,11 @@ Base.@kwdef struct WindScenario
     probability::Float64
 end
 
+"""
+    Instance
+
+Instance data structure.
+"""
 Base.@kwdef struct Instance
     fixed_cost_cable::Float64
     variable_cost_cable::Float64

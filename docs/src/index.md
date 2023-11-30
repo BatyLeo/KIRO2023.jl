@@ -1,10 +1,10 @@
 ```@meta
-CurrentModule = KIRO2022
+CurrentModule = KIRO2023
 ```
 
-# KIRO2022
+# KIRO2023
 
-Documentation for [KIRO2022](https://github.com/BatyLeo/KIRO2022.jl).
+Documentation for [KIRO2023](https://github.com/BatyLeo/KIRO2023.jl).
 
 ## Parsing functions
 
@@ -25,9 +25,6 @@ Note: you may want to implement your own custom data structures that contain add
 - [`is_feasible`](@ref): function that tests if a solution is feasible for a given instance
 - [`cost`](@ref): function that computes the cost of a solution for given instance
 
-## Preparing submission
-- [`prepare_submission`](@ref): this function take as input a `solver` function and automatically produces a solution file for each instance file, ready for submission.
-
 ---
 
 # API
@@ -36,5 +33,5 @@ Note: you may want to implement your own custom data structures that contain add
 ```
 
 ```@autodocs
-Modules = [KIRO2022]
+Modules = [KIRO2023]
 ```
