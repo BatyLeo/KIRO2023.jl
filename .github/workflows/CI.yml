@@ -28,6 +28,6 @@ jobs:
       - run: |
           julia --project=docs -e '
             using Documenter: DocMeta, doctest
-            using KIRO2022
-            DocMeta.setdocmeta!(KIRO2022, :DocTestSetup, :(using KIRO2022); recursive=true)
-            doctest(KIRO2022)'
+            using KIRO2023
+            DocMeta.setdocmeta!(KIRO2023, :DocTestSetup, :(using KIRO2023); recursive=true)
+            doctest(KIRO2023)'
