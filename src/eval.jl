@@ -33,6 +33,14 @@ function is_feasible(solution::Solution, instance::Instance; verbose=true)
         end
     end
 
+    # Check that at most one inter station cable connected to each station
+    for v₁ in 1:nb_station_locations(instance)
+        if @views sum(inter_station_cables[v₁, :] .> 0) > 1
+            verbose && @warn("More than one inter station cable connected to station $v₁.")
+            return false
+        end
+    end
+
     # Check that each turbine is connected to an existing substation
     for (i, v) in enumerate(turbine_links)
         if !x[v]
@@ -62,7 +70,7 @@ function construction_cost(solution::Solution, instance::Instance)
 
     # Inter station cables
     for v₁ in 1:nb_station_locations(instance)
-        for v₂ in (v₁ + 1):nb_station_locations(instance)
+        for v₂ in (v₁+1):nb_station_locations(instance)
             if inter_station_cables[v₁, v₂] > 0
                 q = inter_station_cables[v₁, v₂]
                 total += inter_station_cable_cost(instance, v₁, v₂, q)
