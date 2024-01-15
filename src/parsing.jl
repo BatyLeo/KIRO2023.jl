@@ -90,9 +90,12 @@ function read_instance(path::String)
 end
 
 """
-    read_solution(path::String)
+    read_solution(path::String, instance=nothing)
 
 Read solution from json file `path`.
+
+!!! warning
+    We recommend giving the associated [`Instance`](@ref) as the (optional) second input in order for the parser to infer correctly the number of station locations in the instance.
 """
 function read_solution(path::String, instance=nothing)
     @assert endswith(path, ".json")
@@ -158,7 +161,7 @@ function write_solution(solution::Solution, path::String)
     end
     n = size(inter_station_cables, 1)
     for i in 1:n
-        for j in (i + 1):n
+        for j in (i+1):n
             if inter_station_cables[i, j] > 0
                 push!(
                     data["substation_substation_cables"],
