@@ -7,6 +7,12 @@ Prints some warnings when solution is infeasible and `verbose` is `true`.
 function is_feasible(solution::Solution, instance::Instance; verbose=true)
     (; substations, inter_station_cables, turbine_links) = solution
 
+    # Check that the inter station cables matrix is symmetric
+    if !LinearAlgebra.issymmetric(inter_station_cables)
+        verbose && @warn "The inter station cables matrix is not symmetric"
+        return false
+    end
+
     # Check that all turbines are in the solution
     if nb_turbines(instance) != length(turbine_links)
         verbose && @warn "Not all turbines are in the solution."

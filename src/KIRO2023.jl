@@ -1,6 +1,7 @@
 module KIRO2023
 
 using JSON
+using LinearAlgebra
 
 include("utils.jl")
 include("instance.jl")
